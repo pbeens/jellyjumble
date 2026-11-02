@@ -4,6 +4,24 @@ Concise request summaries, newest first. Initial entries were recorded during
 setup; earlier message timestamps were unavailable. Retrospective entries
 use the recording timestamp and preserve the known message order.
 
+## 2026-11-02T16:29:26-05:00 — Use the standard coffee button graphic
+
+- Summary: Replace the footer’s text support link with the standard Buy Me
+  a Coffee image, linking to the existing pbeens profile.
+- Hostname: Peters-MacBook-Pro.local
+
+## 2026-11-02T16:23:40-05:00 — Correct release status
+
+- Summary: Mark the existing version as released and remove the unreleased
+  designation because Jelly Jumble has already been released.
+- Hostname: Peters-MacBook-Pro.local
+
+## 2026-11-02T16:21:37-05:00 — Add support and issue links
+
+- Summary: Add a Buy Me a Coffee link and direct players with problems to the
+  repository’s issues page.
+- Hostname: Peters-MacBook-Pro.local
+
 ## 2026-11-02T13:02:43-05:00 — Add a changelog
 
 - Summary: Create a changelog alongside the online release preparation.

@@ -1,12 +1,13 @@
 # Changelog
 
-User-visible changes, newest first. Entries under Unreleased describe the
-prepared build; they do not indicate that it has been published.
+User-visible changes and release history, newest first.
 
-## Unreleased — 0.1.0
+## 0.1.0 — Released
 
 ### Added
 
+- Standard yellow Buy Me a Coffee graphic in the footer, alongside the
+  repository’s issue-report link.
 - Original 8×8 jelly puzzle with six pieces identified by shape and color.
 - Neighbor swaps, matches of three or more, gravity, and cascading matches.
 - Twenty successful moves per round, chain-based scoring, a round-complete
@@ -28,8 +29,5 @@ prepared build; they do not indicate that it has been published.
 
 - Added setup, gameplay, browser support, local-data behavior, and publishing
   instructions, with verification status tracked separately.
-
-No online release has been published yet. When publishing, move these notes
-under the released version and its actual release date.
 
 [Project guide](README.md) · [Release checks](tasks.md)

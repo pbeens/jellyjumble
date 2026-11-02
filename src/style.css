@@ -5,3 +5,15 @@
 @media(max-width:580px){.site-header{height:69px;padding:0 17px;gap:12px}.brand{font-size:21px;gap:8px}.brand-icon{width:30px;height:30px;font-size:24px}.header-actions{gap:12px}.quiet-button{font-size:0;padding:8px 0}.quiet-button>span{font-size:12px;width:20px;height:20px}.sound-button{padding:9px 10px;font-size:10px;gap:5px}.intro{margin:27px auto 22px;padding:0 16px}.eyebrow{font-size:8px;letter-spacing:1.5px}h1{font-size:30px;letter-spacing:-1.3px;margin-top:12px}.intro>p:last-child{font-size:11px}.game-layout{display:flex;flex-direction:column;gap:14px;padding:0 15px;max-width:480px}.sidebar{display:contents}.round-heading{display:none}.stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;order:0}.score-card,.moves-card{padding:13px 16px;border-radius:12px;min-height:101px}.stat-label{font-size:8px;letter-spacing:1.3px}.stat-cards strong{font-size:30px;letter-spacing:-1px;margin-top:5px;margin-bottom:0}.score-caption{font-size:8px}.moves-card>div:first-of-type{gap:5px}.moves-card strong{font-size:28px;margin:6px 0 7px}.moves-total{font-size:11px}.move-track{height:4px}.board-section{order:1}.board-topline{height:22px;margin-bottom:9px}.board-topline>span:first-child{font-size:9px;letter-spacing:1.5px}.board-badge{display:block;font-size:7px;padding:5px 8px}.board-frame{padding:8px;border-radius:19px}.corner-sparkle{right:-10px;top:-17px;font-size:29px}#board{gap:4px;padding:5px;border-radius:11px}.cell{padding:1px;border-radius:7px}.board-bottomline{padding-top:7px;align-items:center;gap:5px}.board-bottomline p{font-size:10px}.hint-button{font-size:9px}.best-row{order:2;border:0;padding:1px 5px;font-size:10px;margin-top:-2px}.restart-button{order:3;padding:11px;font-size:11px;border-radius:9px}.no-pressure{order:4;margin:-5px 0 0;font-size:9px}.mini-guide{display:none}.site-footer{margin:22px 10px 18px;font-size:8px;gap:4px}.footer-divider{padding:0 2px}dialog{padding:29px 25px}dialog h2{font-size:29px}dialog p,dialog li{font-size:12px}}
 @media(max-width:350px){.brand{font-size:19px}.header-actions{gap:8px}.site-header{padding:0 12px}h1{font-size:26px}.game-layout{padding:0 10px}#board{gap:2px;padding:4px}.board-frame{padding:7px}.site-footer{flex-wrap:wrap}.score-caption{font-size:7px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Support links stay comfortably tappable below the game. */
+.site-footer{flex-direction:column;gap:8px}
+.site-footer p{margin:0}
+.site-footer p>span:first-child{color:#c88878;font-size:16px}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 20px}
+.footer-links a{display:inline-flex;align-items:center;min-height:44px;padding:8px 4px;color:#795242;font-size:12px;text-underline-offset:3px}
+.footer-links a:hover{text-decoration-thickness:2px}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+
+.footer-links .coffee-link{padding:0;border-radius:10px}
+.coffee-link img{display:block;width:181px;height:auto;max-width:100%}

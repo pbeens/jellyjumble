@@ -1,7 +1,7 @@
 # Jelly Jumble
 
 An original match-three browser game for phones and computers, maintained
-with help from AI agents and intended for GitHub Pages.
+with help from AI agents and hosted on GitHub Pages.
 
 ## First playable version
 
@@ -36,7 +36,8 @@ focus and Enter or Space to select; Escape clears the selection.
 
 Sound starts off. The header's sound button toggles generated tones. Sound
 preferences and personal bests are saved in this browser when local storage
-is available. No account or outside artwork, fonts, or audio service is needed.
+is available. No account, external fonts, or audio service is needed. The standard Buy Me
+a Coffee support button is bundled locally with the site.
 
 Use a modern browser with JavaScript enabled. The game uses SVG, CSS Grid,
 Pointer Events, Web Animations, and native dialogs. Chrome desktop and a
@@ -47,6 +48,12 @@ Rounds stay in memory and reset when the page reloads. Only sound preference
 and personal best are stored locally; clearing this site's browser data
 removes both. The game includes no analytics, accounts, or network requests
 for gameplay. The hosting provider handles ordinary website requests.
+
+## Support and feedback
+
+Enjoying Jelly Jumble? [Buy me a coffee](https://buymeacoffee.com/pbeens).
+Found a problem? [Report it on the issues page](https://github.com/pbeens/jellyjumble/issues).
+Include what happened, what you expected, and your browser/device when possible.
 
 ## Development
 
@@ -100,7 +107,5 @@ styled 64-piece board, a matching swap, restart, and that JavaScript and CSS
 load successfully. Record that public URL here after it has been verified.
 For updates, rebuild and commit the new `docs/` output with the source changes.
 
-The prepared version is **0.1.0**. It has not been published, and this local
-repository has no GitHub remote configured. Repository setup, publication,
-and the live-site check remain outstanding. See [tasks](tasks.md) for the
-current verification results and remaining device checks.
+Version **0.1.0** has been released. See the [changelog](changelog.md) for
+release notes and [tasks](tasks.md) for remaining verification and device checks.
