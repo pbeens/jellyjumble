@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff9ef">
+    <meta name="description" content="A cheerful little match-three puzzle. Swap jellies, make matches, and see how much joy you can pack into 20 moves.">
+    <title>Jelly Jumble — A little match, a lot of joy</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='7' y='8' width='50' height='48' rx='20' fill='%23ee7f8e'/%3E%3Ccircle cx='24' cy='31' r='3' fill='%23493036'/%3E%3Ccircle cx='40' cy='31' r='3' fill='%23493036'/%3E%3Cpath d='M26 41q6 6 12 0' fill='none' stroke='%23493036' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  </head>
+  <body>
+    <section id="local-file-notice" hidden aria-label="Local preview instructions">
+      <h2>Open Jelly Jumble through the local preview</h2>
+      <p>Opening this HTML file directly blocks the game’s assets in your browser.
+        In the project folder, run <code>npm run build</code>, then
+        <code>npm run preview</code>, and open the local address printed in the terminal.
+        For development, use <code>npm run dev</code>.</p>
+    </section>
+    <script>
+      if (location.protocol === 'file:') {
+        document.getElementById('local-file-notice').hidden = false;
+      }
+    </script>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Jelly Jumble home"><span class="brand-icon" aria-hidden="true">j<span>j</span></span><span>jelly jumble<span class="brand-dot">.</span></span></a>
+      <span class="header-note">A LITTLE MATCH. A LOT OF JOY.</span>
+      <div class="header-actions">
+        <button class="quiet-button" id="help-button"><span aria-hidden="true">?</span> How to play</button>
+        <button class="sound-button" id="sound-button" aria-label="Turn sound on" aria-pressed="false"><span id="sound-icon" aria-hidden="true">♪</span><span id="sound-label">Sound off</span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> YOUR HAPPY LITTLE BRAIN BREAK</p>
+        <h1 id="page-title">Good things come in <em>threes.</em></h1>
+        <p>Swap, match, and let the little joys fall into place.</p>
+      </section>
+
+      <div class="game-layout">
+        <aside class="sidebar" aria-label="Round information">
+          <div class="round-heading"><span class="live-dot"></span> A FRESH LITTLE CHALLENGE</div>
+          <div class="stat-cards">
+            <div class="score-card"><span class="stat-label">YOUR SCORE <span aria-hidden="true">✧</span></span><strong id="score">0</strong><span class="score-caption" id="score-caption">Every match is a little win.</span></div>
+            <div class="moves-card"><span class="stat-label">MOVES LEFT <span aria-hidden="true">↔</span></span><div><strong id="moves">20</strong><span class="moves-total">/ 20</span></div><div class="move-track" aria-hidden="true"><div id="move-progress"></div></div></div>
+          </div>
+          <div class="best-row"><span><span aria-hidden="true">♛</span> Personal best</span><strong id="best">0</strong></div>
+          <div class="mini-guide"><div class="tiny-jellies" aria-hidden="true"><span></span><span></span><span></span></div><h2>A match made in jelly.</h2><p>Line up 3 or more of the same jelly. Sit back for the happy little chain reactions.</p></div>
+          <button class="restart-button" id="restart-button"><span aria-hidden="true">↻</span> Start fresh</button>
+          <p class="no-pressure">No timers. No pressure. Just jelly.</p>
+        </aside>
+
+        <section class="board-section" aria-label="Jelly puzzle">
+          <div class="board-topline"><span><span aria-hidden="true">✿</span> THE JELLY PATCH</span><span class="board-badge">MATCH 3 · FEEL GOOD</span></div>
+          <div class="board-frame"><div id="board" role="group" aria-label="Jelly board. Select a piece, then a neighboring piece to swap. Arrow keys move focus." aria-busy="false"></div><span class="corner-sparkle" aria-hidden="true">✦</span></div>
+          <div class="board-bottomline"><p id="status" role="status" aria-live="polite">Pick a jelly. Find its happy place.</p><button id="hint-button" class="hint-button"><span aria-hidden="true">✧</span> A little hint</button></div>
+        </section>
+      </div>
+      <footer class="site-footer"><span aria-hidden="true">♡</span> Made for a moment of play.<span class="footer-divider">·</span>20 moves. Endless possibilities.</footer>
+    </main>
+
+    <dialog id="help-dialog" aria-labelledby="help-title">
+      <button class="dialog-close" id="close-help" aria-label="Close instructions">×</button>
+      <p class="eyebrow">A LITTLE HOW-TO</p><h2 id="help-title">Find your happy match.</h2>
+      <ol><li><strong>Pick two neighbors.</strong> Tap or click a jelly, then one beside it. You can also swipe a jelly toward its neighbor.</li><li><strong>Make a line of 3 or more.</strong> Match the same shape across or down. A swap that makes no match goes back and costs no move.</li><li><strong>Let the jellies tumble.</strong> New pieces drop in. Chain reactions multiply your points, all in one move.</li></ol>
+      <p>You have 20 moves. Each matched jelly earns 10 points, multiplied by the chain reaction number. No moves available? We’ll mix the board for you.</p>
+      <p class="keyboard-note">Keyboard: use arrow keys to explore the board, and Enter or Space to select two neighbors. Escape clears your selection.</p>
+      <button class="primary-button" id="play-button">Let’s play <span aria-hidden="true">↗</span></button>
+    </dialog>
+
+    <dialog id="end-dialog" aria-labelledby="end-title">
+      <p class="end-star" aria-hidden="true">✦</p><p class="eyebrow">TWENTY MOVES, WELL SPENT</p><h2 id="end-title">That was pretty sweet.</h2><p>Your little moment of joy added up to</p><strong class="end-score" id="end-score">0</strong><p id="end-message">Ready for another happy jumble?</p><button class="primary-button" id="play-again">Another little round <span aria-hidden="true">↻</span></button><button class="text-button" id="view-board">Admire the board</button>
+    </dialog>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

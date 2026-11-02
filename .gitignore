@@ -1,0 +1,16 @@
+# Dependencies and local caches
+node_modules/
+.vite/
+.cache/
+
+# Machine-specific files and logs
+.DS_Store
+Thumbs.db
+*.log
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Keep docs/ tracked: it will hold the generated GitHub Pages website.
